@@ -24,9 +24,10 @@ public class ShapesTest {
 		
 		// Variable / Object initialization
 		Dialog dialog = new MessageBox();
-		Cuboid cuboid = new Cuboid(dialog);
-		Cylinder cylinder = new Cylinder(dialog);
-		Sphere sphere = new Sphere(dialog);
+		ShapeFactory shapeFactory = new ShapeFactory(dialog);
+		Cuboid cuboid = shapeFactory.makeCuboid(dialog);
+		Cylinder cylinder = shapeFactory.makeCylinder(dialog);
+		Sphere sphere = shapeFactory.makeSphere(dialog);
 		
 		System.out.println("Welcome to the Shapes Renderer.");
 		
